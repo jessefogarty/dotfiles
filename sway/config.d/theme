@@ -1,0 +1,49 @@
+# Apply gtk theming
+exec_always ~/.config/sway/scripts/import-gsettings
+
+# Set inner/outer gaps
+gaps inner 2
+gaps outer 0
+
+# Hide titlebar on windows: 
+default_border pixel 1
+
+# Default Font
+font pango:JetBrainsMono Nerd Font 10
+
+# Thin borders:
+smart_borders on
+
+# Set wallpaper:
+exec swaybg -i ~/.config/sway/wallpapers/eos-material-bg.jpeg
+
+# Title format for windows
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"
+
+#
+# Old EOS Theme
+# class                 border  bground text    indicator child_border
+#client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+#client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+#client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+#client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+client.background       #F8F8F2
+
+#
+# 11:11 theme
+#
+# class                 border  backgr. text    indicator child_border
+client.focused          #d6b692 #262626 #f0f0f0 #9ec3c4   #d6b692
+client.focused_inactive #d6b692 #262626 #f0f0f0 #9ec3c4   #d6b692
+client.unfocused        #d6b692 #0f0f0f #f0f0f0 #9ec3c4   #4c4c4c
+client.urgent           #d6b692 #c49ec4 #0f0f0f #9ec3c4   #c49ec4
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+   swaybar_command waybar
+}
