@@ -1,0 +1,37 @@
+# Auth with polkit-gnome:
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+exec `ssh-agent -s`
+
+# required to satisfy VS Code
+exec `/usr/bin/gnome-keyring-daemon --start`
+
+# Desktop notifications
+exec mako
+
+# Network Applet
+exec nm-applet --indicator
+exec blueman-applet
+# opensnitch-ui
+exec opensnitch-ui
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+     
+# Welcome App
+exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
+
+# Sway Fader
+# exec python3 ~/.config/sway/scripts/swayfader.py      
+
+# Set displays
+exec kanshi
+
+# exec kitty configured session
+#   - launch tmuxinator
+#     - also launches the floating HUD kitty session
+exec kitty --session scratchTerm.conf
+exec kitty --session stats.conf
+exec kitty --session tasks.conf
+#exec wlsunset -l 43.65 -L -79.34
