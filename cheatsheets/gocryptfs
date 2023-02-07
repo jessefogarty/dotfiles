@@ -1,0 +1,29 @@
+# Standard Mode
+# the cipher folder should be inside the Dropbox folder 
+# but the plain folder should be outside! Example:
+
+mkdir ~/Dropbox/cipher
+mkdir ~/plain
+gocryptfs -init ~/Dropbox/cipher
+gocryptfs ~/Dropbox/cipher ~/plain
+
+---
+
+# Reverse Mode
+# The following shows an example of user archie creating a backup of /home/archie
+gocryptfs -init -reverse /home/archie
+#Second, an empty directory for the encrypted view of the home directory is created and mounted
+mkdir /tmp/crypt
+gocryptfs -reverse /home/archie /tmp/crypt
+# Third, archie creates a backup of the encrypted directory, a simple local copy for this example
+cp -a /tmp/crypt /tmp/backup
+# The encrypted directory can stay mounted for the user session, or be unmounted manually
+fusermount -u /tmp/crypt
+rmdir /tmp/crypt
+
+ ---
+
+# Reverse Mode - Restore
+# using the archie example above
+mkdir /tmp/restore
+gocryptfs /tmp/backup/ /tmp/restore

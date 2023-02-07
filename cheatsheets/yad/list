@@ -1,0 +1,2 @@
+# 3 item list using default newline separator
+echo "sel1\nsel2\nsel3\n" | yad --list --column="scratchpads" --title="show scratchpad" --width=350 --height=200
