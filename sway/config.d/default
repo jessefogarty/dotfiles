@@ -58,9 +58,9 @@ exec swayidle -w\
     # Kill focused window
     bindsym $mod+c kill
 
-    bindsym $mod+f5 [app_id=mainTerm] scratchpad show
-    bindsym $mod+f7 [app_id=Tasks] scratchpad show
-    bindsym $mod+f8 [app_id=StatsTerm] scratchpad show
+    bindsym $mod+f5 [app_id=mainTerm] scratchpad show, resize set width 95 ppt height 85 ppt
+    bindsym $mod+f7 [app_id=Tasks] scratchpad show, resize set width 80 ppt height 70 ppt
+    bindsym $mod+f8 [app_id=StatsTerm] scratchpad show, resize set width 80 ppt height 70 ppt
     bindsym $mod+Shift+p scratchpad show
     bindsym $mod+p move to scratchpad
     
