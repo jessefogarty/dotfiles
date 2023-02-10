@@ -6,7 +6,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "custom/spotify"],
     "modules-center": ["custom/scratchpads", "custom/border-left",  "cpu", "memory", "temperature", "custom/fanspeed", "custom/border-right"],
     "modules-right": ["custom/border-left", "network", "pulseaudio", "backlight", "battery", "battery#bat2", "clock", "tray", "custom/border-right", "custom/powerctrl"],
 
@@ -43,15 +43,15 @@
     },
 
      // Spotify
-	"custom/spotify": {
-		"exec": "~/.config/waybar/scripts/mediaplayer.sh --player spotify",
-		"format": " {}",
-        "all-outputs": true,
-        "return-type": "json",
-		"on-click": "playerctl play-pause",
-		"on-scroll-up": "playerctl next",
-		"on-scroll-down": "playerctl previous"
-	},
+    "custom/spotify": {
+      "exec": "~/.config/waybar/scripts/mediaplayer.py",
+      "format": " {}",
+          "all-outputs": true,
+          "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
+    },
      
      // Border Radius
      "custom/border-left": {

@@ -5,6 +5,7 @@ import sys
 import signal
 import gi
 import json
+import re
 gi.require_version('Playerctl', '2.0')
 from gi.repository import Playerctl, GLib
 
@@ -35,14 +36,13 @@ def on_metadata(player, metadata, manager):
             'mpris:trackid' in metadata.keys() and \
             ':ad:' in player.props.metadata['mpris:trackid']:
         track_info = 'AD PLAYING'
-    elif player.get_artist() != '' and player.get_title() != '':
-        track_info = '{artist} - {title}'.format(artist=player.get_artist(),
-                                                 title=player.get_title())
     else:
         track_info = player.get_title()
+        track_info = re.findall("^.*?\\!", player.get_title())[0]
 
     if player.props.status != 'Playing' and track_info:
-        track_info = ' ' + track_info
+        track_info = f' {track_info}'
+    track_info = track_info[:50]
     write_output(track_info, player)
 
 
