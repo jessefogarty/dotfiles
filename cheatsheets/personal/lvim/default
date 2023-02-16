@@ -1,0 +1,22 @@
+# Basics
+<leader> = space
+<M>      = alt
+<leader> + 1s wait = help menu
+<leader><wait> + backspace = shortcut FAQ
+
+# Dir Tree
+<leader> + e
+
+# File Finder
+<leader> + f
+
+# Toggle Terminal
+## scratchpad
+  <leader> + \
+  <M> + 3
+
+## horizontal
+  <M> + 1
+
+## vertical
+  <M> + 2

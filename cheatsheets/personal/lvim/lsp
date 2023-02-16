@@ -1,0 +1,36 @@
+# NOTE: all are insert mode only
+
+# show menu
+<C-space>
+
+# abort
+<C-e>
+
+# scroll down / next snippet- menu
+<C-k> <Up> <Tab>
+
+# scroll up / previous snippet - menu
+<C-j> <Down> <S-Tab>
+
+# NOTE: all in normal mode
+
+# hover info
+<K>
+
+# go to definition
+<gd>
+
+# go to declaration
+<gD>
+
+# go to reference
+<gr>
+
+# go to implementation
+<gI>
+
+# show signature help
+<gs>
+
+# show line diagnostics
+<gl>

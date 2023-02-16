@@ -1,0 +1,7 @@
+# comment line
+<leader>/ 
+# comment block
+gb (visual only)
+
+# move line(s) up / down
+<M> + k/j

@@ -1,0 +1,2 @@
+# enable / disbale wifi radio
+sudo nmcli radio wifi <on|off>

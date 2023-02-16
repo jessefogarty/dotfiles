@@ -1,0 +1,13 @@
+# change window dimensions
+
+<C-Up> - increase height
+<C-Down> - decrease height
+<C-Left> - decrease width
+<C-Right> - increase width
+
+# window navigation
+
+<C-h> - left window
+<C-j> - lower window
+<C-k> - upper window
+<C-l> - right window

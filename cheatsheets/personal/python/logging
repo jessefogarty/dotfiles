@@ -1,0 +1,8 @@
+# Default Basic Config
+
+logging.basicConfig(
+    format="%(name)s: %(asctime)s | %(levelname)s | %(filename)s:%(lineno)s | %(process)d >>> %(message)s",
+    datefmt="%Y-%m-%dT%H:%M:%SZ",
+)
+
+---

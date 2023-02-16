@@ -1,0 +1,23 @@
+format code  extension  resolution note
+249          webm       audio only DASH audio   73k , opus @ 50k, 18.84MiB
+250          webm       audio only DASH audio   91k , opus @ 70k, 24.31MiB
+171          webm       audio only DASH audio  129k , vorbis@128k, 37.60MiB
+140          m4a        audio only DASH audio  130k , m4a_dash container, mp4a.40.2@128k, 46.74MiB
+251          webm       audio only DASH audio  164k , opus @160k, 46.21MiB
+278          webm       192x144    144p   99k , webm container, vp9, 24fps, video only, 29.39MiB
+160          mp4        192x144    144p  105k , avc1.4d400b, 24fps, video only, 12.58MiB
+242          webm       320x240    240p  170k , vp9, 24fps, video only, 36.39MiB
+133          mp4        320x240    240p  283k , avc1.4d400d, 24fps, video only, 34.71MiB
+243          webm       480x360    360p  318k , vp9, 24fps, video only, 77.91MiB
+244          webm       640x480    480p  587k , vp9, 24fps, video only, 119.40MiB
+134          mp4        480x360    360p  672k , avc1.4d4015, 24fps, video only, 69.41MiB
+135          mp4        640x480    480p 1068k , avc1.4d401e, 24fps, video only, 93.41MiB
+247          webm       960x720    720p 1137k , vp9, 24fps, video only, 146.00MiB
+136          mp4        960x720    720p 1664k , avc1.4d401f, 24fps, video only, 131.17MiB
+248          webm       1440x1080  1080p 1985k , vp9, 24fps, video only, 193.01MiB
+137          mp4        1440x1080  1080p 2424k , avc1.640028, 24fps, video only, 182.11MiB
+17           3gp        176x144    small , mp4v.20.3, mp4a.40.2@ 24k, 28.87MiB
+36           3gp        320x240    small , mp4v.20.3, mp4a.40.2, 79.27MiB
+18           mp4        480x360    medium , avc1.42001E, mp4a.40.2@ 96k, 136.43MiB
+43           webm       640x360    medium , vp8.0, vorbis@128k, 181.70MiB
+22           mp4        960x720    hd720 , avc1.64001F, mp4a.40.2@192k (best)
